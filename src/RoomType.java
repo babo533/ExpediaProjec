@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public enum RoomType {
+public enum RoomType {
+    SUITE,
+    FAMILY_ROOM,
+    STUDIO,
+    PRESIDENTIAL_SUITE,
+    EXECUTIVE_SUITE,
+    BRIDAL_SUITE,
+    HONEYMOON_SUITE,
+    PENTHOUSE,
+    STANDARD_SUITE;
 }

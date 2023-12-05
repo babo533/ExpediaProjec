@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public enum FlightType {
+public enum FlightType {
+    ECONOMY,
+    ECONOMY_PLUS,
+    BUSINESS,
+    BUSINESS_PLUS,
+    FIRST_CLASS;
 }
