@@ -1,52 +1,44 @@
-import java.util.*;
 import java.io.*;
-import java.util.logging.FileHandler;
+import java.util.*;
 
 public abstract class User {
-    protected String username;
-    protected String password;
-    protected boolean isAuthenticated;
-    protected String userType;
+    private String username;
+    private String password;
+    private List<Service> bookedServices;
+    protected UserTypeStrategy userTypeStrategy;
 
-
-    public User(String username, String password) {
+    public User(String username, String password, UserTypeStrategy userTypeStrategy) {
         this.username = username;
         this.password = password;
-        this.isAuthenticated = false;
+        this.userTypeStrategy = userTypeStrategy;
+        this.bookedServices = new ArrayList<>();
     }
 
-    // Getters and setters for isAuthenticated
-    public boolean isAuthenticated() {
-        return isAuthenticated;
+    public String getUsername() {
+        return username;
     }
 
-    protected void setAuthenticated(boolean authenticated) {
-        isAuthenticated = authenticated;
+    public void bookService(Service service) {
+        userTypeStrategy.bookService(this, service);
     }
 
-    public boolean login(String username, String password, FileHandler fileHandler) {
-        if (authenticate(username, password, fileHandler)) {
-            this.isAuthenticated = true;
-            // Additional session initialization logic can go here
-            return true;
-        }
-        return false;
+    public void viewBookedServices() {
+        userTypeStrategy.viewBookedServices(this);
     }
 
-    public boolean authenticate(String username, String password, FileHandler fileHandler) {
-        try {
-            List<String> lines = fileHandler.readLines();
-            for (String line : lines) {
-                String[] userDetails = line.split(",");
-                if (userDetails.length == 3 && userDetails[1].equals(username) && userDetails[2].equals(password)) {
-                    return isCorrectUserType(userDetails[0]);
-                }
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
+    public void addBookedService(Service service) {
+        bookedServices.add(service);
     }
 
-    protected abstract boolean isCorrectUserType(String userType);
+    public List<Service> getBookedServices() {
+        return bookedServices;
+    }
+
+    public UserTypeStrategy getUserTypeStrategy() {
+        return userTypeStrategy;
+    }
+
+    public void setUserTypeStrategy(UserTypeStrategy userTypeStrategy) {
+        this.userTypeStrategy = userTypeStrategy;
+    }
 }

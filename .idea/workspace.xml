@@ -4,22 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="">
+    <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/AdminUserStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CarDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FlightDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PremiumUserStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegularUserStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RoomDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserTypeStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlightType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InventoryModification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InventoryModification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/InventoryModification.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PremiumUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RegularUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RentalCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalCarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/cars.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/users.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/users.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,24 +56,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/hoon/IdeaProjects/A11_FinalProject/src/Main.java&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "onboarding.tips.debug.path": "/Users/hoon/IdeaProjects/A11_FinalProject/src/Main.java",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="A11_FinalProject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,22 +103,29 @@
       <workItem from="1701210533222" duration="4000" />
       <workItem from="1701211168383" duration="914000" />
       <workItem from="1701565821658" duration="17569000" />
-      <workItem from="1701743832534" duration="1709000" />
+      <workItem from="1701743832534" duration="2821000" />
+      <workItem from="1701921771569" duration="5590000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1701745617914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701745617914</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/RegularUser.java</url>
-          <line>4</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

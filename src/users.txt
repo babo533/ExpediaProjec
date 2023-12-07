@@ -3,3 +3,4 @@ Premium,john_doe,johndoe123
 Regular,jane_smith,janesmith456
 Admin,super_admin,superadmin789
 Premium,jim_beam,jimbeam234
+regular,poop,poop
