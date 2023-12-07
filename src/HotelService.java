@@ -4,8 +4,8 @@ import java.util.*;
 public class HotelService extends Service {
     private Map<String, RoomDetails> roomInventory;
 
-    public HotelService(String name, double price, double rating) {
-        super(name, price, rating);
+    public HotelService(String name, double price) {
+        super(name, price);
         this.roomInventory = new HashMap<>();
     }
 

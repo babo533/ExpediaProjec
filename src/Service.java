@@ -1,12 +1,11 @@
 public abstract class Service {
     private String name;
     private double price;
-    private double rating;
 
-    public Service(String name, double price, double rating) {
+
+    public Service(String name, double price) {
         this.name = name;
         this.price = price;
-        this.rating = rating;
     }
 
     // Getters and setters
@@ -26,13 +25,6 @@ public abstract class Service {
         this.price = price;
     }
 
-    public double getRating() {
-        return rating;
-    }
-
-    public void setRating(double rating) {
-        this.rating = rating;
-    }
 
     public void applyDiscount(double discountRate) {
         this.price *= (1 - discountRate);

@@ -5,6 +5,7 @@ public class Main {
     private static BFF bff = new BFF();
     private static DataManager dataManager = new DataManager(); // Assuming DataManager handles user data
 
+
     public static void main(String[] args) {
         bff.printFancy("Welcome to Expedia Clone");
 
@@ -79,6 +80,40 @@ public class Main {
             }
         }
     }
+    public void handleServiceAddition() {
+        int choice = bff.inputInt("Enter choice (1 for flights, 2 for hotels, etc.)");
+
+        if (choice == 1) {
+            addFlightDetails();
+        }
+        // Handle other choices similarly
+    }
+
+    private String generateFlightKey(String departureLocation, String arrivalLocation) {
+        return departureLocation + "_" + arrivalLocation;
+    }
+
+
+    private void addFlightDetails() {
+        bff.print("Enter flight details:");
+
+        FlightType flightType = FlightType.valueOf(bff.inputWord("Flight Type"));
+        String departureLocation = bff.input("Departure Location");
+        String arrivalLocation = bff.input("Arrival Location");
+        double price = bff.inputDouble("Price");
+
+        // Create a new FlightDetails object
+        FlightDetails newFlight = new FlightDetails(flightType, departureLocation, arrivalLocation, price);
+
+        // Generate a unique key for the flight
+        String flightKey = generateFlightKey(departureLocation, arrivalLocation);
+
+        // Add the new flight to the flight service
+        //flightService.addFlight(flightKey, newFlight);
+    }
+
+
+    // ... other methods ...
 
 }
 

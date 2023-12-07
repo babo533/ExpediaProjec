@@ -1,13 +1,21 @@
 public class FlightDetails {
+    private FlightType flightType;
     private String departureLocation;
     private String arrivalLocation;
-    private String flightDuration;
-    private FlightType flightType; // Assuming FlightType is an enum you've defined
+    private double price;
 
-    public FlightDetails(String departureLocation, String arrivalLocation, String flightDuration, FlightType flightType) {
+    public FlightDetails(FlightType flightType, String departureLocation, String arrivalLocation, double price) {
+        this.flightType = flightType;
         this.departureLocation = departureLocation;
         this.arrivalLocation = arrivalLocation;
-        this.flightDuration = flightDuration;
+        this.price = price;
+    }
+
+    public FlightType getFlightType() {
+        return flightType;
+    }
+
+    public void setFlightType(FlightType flightType) {
         this.flightType = flightType;
     }
 
@@ -27,19 +35,11 @@ public class FlightDetails {
         this.arrivalLocation = arrivalLocation;
     }
 
-    public String getFlightDuration() {
-        return flightDuration;
+    public double getPrice() {
+        return price;
     }
 
-    public void setFlightDuration(String flightDuration) {
-        this.flightDuration = flightDuration;
-    }
-
-    public FlightType getFlightType() {
-        return flightType;
-    }
-
-    public void setFlightType(FlightType flightType) {
-        this.flightType = flightType;
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
