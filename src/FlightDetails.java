@@ -43,10 +43,6 @@ public class FlightDetails {
         this.price = price;
     }
 
-    @Override
-    public void bookService(User user, String serviceName) {
-
-    }
 
     @Override
     public String toString() {

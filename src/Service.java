@@ -1,6 +1,6 @@
 public abstract class Service {
-    private String name;
-    private double price;
+    protected String name;
+    protected double price;
 
 
     public Service(String name, double price) {

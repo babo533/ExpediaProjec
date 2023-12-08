@@ -102,7 +102,71 @@ public class Main {
                         break;
                 }
             }
-            // ... handle other user types ...
+            else if (user instanceof AdminUser) {
+                AdminUser adminUser = (AdminUser) user;
+                String adminChoice = bff.input("Select an option:\n1. View All Users\n2. View All Booked Services\n3. Add Flight\n4. Add Car\n5. Add Hotel\n6. Logout", "1", "2", "3", "4", "5", "6");
+                switch (adminChoice) {
+                    case "1":
+                        adminUser.printAllUsers();
+                        break;
+                    case "2":
+                        adminUser.viewAllBookedServices();
+                        break;
+                    case "3":
+                        adminUser.addFlightAsAdmin(flightService);
+                        break;
+                    case "4":
+                        adminUser.addCarsAsAdmin(rentalCarService);
+                        break;
+                    case "5":
+                        adminUser.addHotelsAsAdmin(hotelService);
+                        break;
+                    case "6":
+                        isSessionActive = false; // Logout
+                        break;
+                    default:
+                        System.out.println("Invalid option. Please try again.");
+                }
+                // ... handle other user types ...
+            }
+            else {
+                RegularUser regularUser = (RegularUser) user;
+                String userChoice = bff.input("Select an option:\n1. Check Available Services\n2. Book a Service\n3. View Booked Services\n4. Logout", "1", "2", "3", "4");
+                switch (userChoice) {
+                    case "1":
+                        regularUser.checkAvailableServices(flightService, hotelService, rentalCarService);
+                        break;
+                    case "2":
+                        String serviceType = bff.input("Choose a service to book:\n1. Flight\n2. Hotel\n3. Car Rental", "1", "2", "3");
+
+                        Service selectedService = null;
+                        if ("1".equals(serviceType)) {
+                            selectedService = selectFlightService();
+                        }
+                        else if ("2".equals(serviceType)) {
+                            selectedService = selectHotelService();
+                        }
+                        else if ("3".equals(serviceType)) {
+                            selectedService = selectCarRentalService();
+                        }
+
+                        if (selectedService != null) {
+                            regularUser.bookService(selectedService);
+                        } else {
+                            System.out.println("No service was booked.");
+                        }
+
+                        break;
+                    case "3":
+                        regularUser.getUserTypeStrategy().viewBookedServices(regularUser);
+                        break;
+                    case "4":
+                        isSessionActive = false; // Logout
+                        break;
+                    default:
+                        System.out.println("Invalid option. Please try again.");
+                }
+            }
         }
     }
 
@@ -130,7 +194,6 @@ public class Main {
 
     private static Service selectFlightService() {
         Map<String, FlightDetails> flights = flightService.getFlightInventory();
-
         if (flights.isEmpty()) {
             System.out.println("No flights are currently available.");
             return null;
@@ -141,66 +204,102 @@ public class Main {
         for (int i = 0; i < flightKeys.size(); i++) {
             String key = flightKeys.get(i);
             FlightDetails details = flights.get(key);
-            System.out.println((i + 1) + ". " + key + ": " + details); // Display index and flight details
+            System.out.println((i + 1) + ". " + key + ": " + details); // Assuming FlightDetails has a meaningful toString() method
         }
 
-        int flightIndex;
-        try {
-            flightIndex = bff.inputInt("Enter the number of the flight to book (or 0 to return):", 0, flightKeys.size());
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a valid number.");
-            return null;
+        int flightIndex = -1;
+        while (flightIndex < 1 || flightIndex > flightKeys.size()) {
+            try {
+                flightIndex = bff.inputInt("Enter the number of the flight to book (or 0 to return):", 0, flightKeys.size());
+                if (flightIndex == 0) {
+                    System.out.println("Returning to previous menu.");
+                    return null;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
         }
 
-        if (flightIndex > 0 && flightIndex <= flightKeys.size()) {
-            return flights.get(flightKeys.get(flightIndex - 1));
-        } else {
-            System.out.println("Returning to previous menu or invalid selection.");
-            return null;
-        }
+        FlightDetails selectedFlight = flights.get(flightKeys.get(flightIndex - 1));
+        return new FlightServiceHelper(selectedFlight);
     }
-
-
-
-
 
     private static Service selectHotelService() {
         Map<String, RoomDetails> rooms = hotelService.getRoomInventory();
-        rooms.forEach((key, value) -> System.out.println(key + ": " + value));
-
-        String roomKey = bff.input("Enter the key of the room to book or 'back' to return:");
-        if (!"back".equalsIgnoreCase(roomKey) && rooms.containsKey(roomKey)) {
-            return rooms.get(roomKey);
-        } else {
-            System.out.println("Invalid selection or no such room.");
+        if (rooms.isEmpty()) {
+            System.out.println("No hotel rooms are currently available.");
             return null;
         }
+
+        System.out.println("Available Hotel Rooms:");
+        List<String> roomKeys = new ArrayList<>(rooms.keySet());
+        for (int i = 0; i < roomKeys.size(); i++) {
+            String key = roomKeys.get(i);
+            RoomDetails details = rooms.get(key);
+            System.out.println((i + 1) + ". " + key + ": " + details); // Assuming RoomDetails has a meaningful toString() method
+        }
+
+        int roomIndex = -1;
+        while (roomIndex < 1 || roomIndex > roomKeys.size()) {
+            try {
+                roomIndex = bff.inputInt("Enter the number of the room to book (or 0 to return):", 0, roomKeys.size());
+                if (roomIndex == 0) {
+                    System.out.println("Returning to previous menu.");
+                    return null;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        RoomDetails selectedRoom = rooms.get(roomKeys.get(roomIndex - 1));
+        return new HotelServiceHelper(selectedRoom);
     }
 
 
     private static Service selectCarRentalService() {
         Map<String, CarDetails> cars = rentalCarService.getCarInventory();
-        cars.forEach((key, value) -> System.out.println(key + ": " + value));
-
-        String carKey = bff.input("Enter the key of the car to rent or 'back' to return:");
-        if (!"back".equalsIgnoreCase(carKey) && cars.containsKey(carKey)) {
-            return cars.get(carKey);
-        } else {
-            System.out.println("Invalid selection or no such car.");
+        if (cars.isEmpty()) {
+            System.out.println("No cars are currently available for rental.");
             return null;
         }
-    }
 
-
-
-    public void handleServiceAddition() {
-        int choice = bff.inputInt("Enter choice (1 for flights, 2 for hotels, 3 for cars)");
-
-        if (choice == 1) {
-            //addFlightDetails();
+        System.out.println("Available Cars for Rental:");
+        List<String> carKeys = new ArrayList<>(cars.keySet());
+        for (int i = 0; i < carKeys.size(); i++) {
+            String key = carKeys.get(i);
+            CarDetails details = cars.get(key);
+            System.out.println((i + 1) + ". " + key + ": " + details); // Assuming CarDetails has a meaningful toString() method
         }
-        // Handle other choices similarly
+
+        int carIndex = -1;
+        while (carIndex < 1 || carIndex > carKeys.size()) {
+            try {
+                carIndex = bff.inputInt("Enter the number of the car to rent (or 0 to return):", 0, carKeys.size());
+                if (carIndex == 0) {
+                    System.out.println("Returning to previous menu.");
+                    return null;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a valid number.");
+            }
+        }
+
+        CarDetails selectedCar = cars.get(carKeys.get(carIndex - 1));
+        return new CarServiceHelper(selectedCar);
     }
+
+//
+//
+//
+//    public void handleServiceAddition() {
+//        int choice = bff.inputInt("Enter choice (1 for flights, 2 for hotels, 3 for cars)");
+//
+//        if (choice == 1) {
+//            //addFlightDetails();
+//        }
+//        // Handle other choices similarly
+//    }
 
 
 

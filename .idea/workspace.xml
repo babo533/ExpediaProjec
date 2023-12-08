@@ -4,24 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/flights.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hotels.txt" afterDir="false" />
+    <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="pds">
+      <change afterPath="$PROJECT_DIR$/src/CarServiceHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FlightServiceHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/HotelServiceHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FlightDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PremiumUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PremiumUserStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumUserStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegularUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegularUserStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularUserStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RentalCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalCarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RoomDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +105,7 @@
       <workItem from="1701565821658" duration="17569000" />
       <workItem from="1701743832534" duration="2821000" />
       <workItem from="1701921771569" duration="5590000" />
-      <workItem from="1701931146586" duration="14619000" />
+      <workItem from="1701931146586" duration="17598000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -141,15 +131,35 @@
       <option name="project" value="LOCAL" />
       <updated>1701945615089</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pds">
+      <option name="closed" value="true" />
+      <created>1701998275560</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701998275560</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="pds" />
+    <option name="LAST_COMMIT_MESSAGE" value="pds" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
