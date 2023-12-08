@@ -1,6 +1,5 @@
-Admin,admin_user,adminpass123
-Premium,john_doe,johndoe123
-Regular,jane_smith,janesmith456
-Admin,super_admin,superadmin789
-Premium,jim_beam,jimbeam234
-regular,poop,poop
+Admin,john_doe,1234password,Flight:500.0:BUSINESS:Chicago:Miami;Hotel:200.0:DELUXE:Marriott:New York
+Premium,jane_smith,pass5678,Car:50.0:Sedan:Toyota Camry;Car:50.0:Sedan:Toyota Camry;Flight:400.0:ECONOMY:Boston:San Francisco;Flight:400.0:ECONOMY:Boston:San Francisco
+Regular,jim_beam,securepass123,Flight:600.0:ECONOMY:Tokyo:Singapore;Flight:600.0:ECONOMY:Tokyo:Singapore
+Admin,super_admin,admin123
+Admin,poop,poop

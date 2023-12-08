@@ -1,2 +1,2 @@
 Sedan,Toyota Camry,50.0
-SUV,Ford Explorer,70.0
+SUV,Ford Explorer,70.0Nissan,Altima,35.0

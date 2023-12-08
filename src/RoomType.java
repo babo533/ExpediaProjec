@@ -6,6 +6,8 @@ public enum RoomType {
     EXECUTIVE_SUITE,
     BRIDAL_SUITE,
     HONEYMOON_SUITE,
+    STANDARD,
     PENTHOUSE,
+    DELUXE,
     STANDARD_SUITE;
 }

@@ -27,7 +27,7 @@ public abstract class Service {
 
 
     public void applyDiscount(double discountRate) {
-        this.price *= (1 - discountRate);
+        this.price *= (0.9);
     }
     // Abstract method to be implemented by subclasses
 

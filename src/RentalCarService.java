@@ -10,7 +10,7 @@ public class RentalCarService extends Service {
     public RentalCarService() throws IOException {
         super("Rental Car Service", 0.0);
         this.carInventory = new HashMap<>();
-        loadCarData("/Users/hoon/IdeaProjects/A11_FinalProject/src/cars.txt)");
+        loadCarData("/Users/hoon/IdeaProjects/A11_FinalProject/src/cars.txt");
     }
 
     public void loadCarData(String filePath) {
@@ -36,15 +36,16 @@ public class RentalCarService extends Service {
     }
 
 
-    public void addCarToFile(String model, String type, double pricePerDay) {
-        try (FileWriter fw = new FileWriter("cars.txt", true);
+    public void addCarToFile(String brand, String model, double pricePerDay) {
+        try (FileWriter fw = new FileWriter("/Users/hoon/IdeaProjects/A11_FinalProject/src/cars.txt", true); // Make sure the file path is correct
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
-            out.println(model + "," + type + "," + pricePerDay);
+            out.println(brand + "," + model + "," + pricePerDay);
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
     }
+
 
     @Override
     public void bookService(User user, String carKey) {

@@ -5,4 +5,4 @@ FIRST_CLASS,New York,London,1200
 ECONOMY,Tokyo,Singapore,600
 BUSINESS,Los Angeles,Tokyo,850
 FIRST_CLASS,Dubai,Paris,1500
-ECONOMY,Sydney,Auckland,300
+ECONOMY,Sydney,Auckland,300ECONOMY,Los Angeles,Miami,1000.0

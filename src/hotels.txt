@@ -1,8 +1,9 @@
-STANDARD,Marriott,New York,150
-DELUXE,Hilton,Los Angeles,200
+BRIDAL_SUITE,Marriott,New York,150
+PENTHOUSE,Hilton,Los Angeles,200
 SUITE,Hyatt,Chicago,250
-STANDARD,Marriott,London,180
-DELUXE,Hilton,Tokyo,220
+BRIDAL_SUITE,Marriott,London,180
+STUDIO,Hilton,Tokyo,220
 SUITE,Hyatt,Dubai,300
 STANDARD,Marriott,Sydney,160
-DELUXE,Hilton,Paris,210
+PENTHOUSE,Hilton,Paris,210
+STANDARD,Mariott,Paris,1000.0

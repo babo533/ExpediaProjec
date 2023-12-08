@@ -64,8 +64,13 @@ public class Main {
         String role = bff.input("Enter role (Admin/Premium/Regular)", "Admin", "Premium", "Regular");
 
         // Add user to the file
-        dataManager.addUser(role, username, password);
-        bff.print("User registered successfully.");
+        if (dataManager.usernameExists(username)) {
+            bff.print("Username already exists. Please choose a different username.");
+        } else {
+            dataManager.addUser(role, username, password);
+            bff.print("User registered successfully.");
+        }
+
     }
 
     private static User login() {
@@ -92,6 +97,7 @@ public class Main {
                         // Call method to handle booking for premium user
                         Service selectedService = selectService(); // Implement this method
                         user.getUserTypeStrategy().bookService(user, selectedService);
+                        dataManager.bookServiceForUser(user, selectedService);
                         break;
                     case "2":
                         // Call method to view booked services for premium user
@@ -130,41 +136,21 @@ public class Main {
                 // ... handle other user types ...
             }
             else {
-                RegularUser regularUser = (RegularUser) user;
-                String userChoice = bff.input("Select an option:\n1. Check Available Services\n2. Book a Service\n3. View Booked Services\n4. Logout", "1", "2", "3", "4");
-                switch (userChoice) {
+                String choice = bff.input("Select an option:\n1. Book a Service\n2. View Booked Services\n3. Logout", "1", "2", "3");
+                switch (choice) {
                     case "1":
-                        regularUser.checkAvailableServices(flightService, hotelService, rentalCarService);
+                        // Call method to handle booking for regular user
+                        Service selectedService = selectService(); // Implement this method
+                        user.getUserTypeStrategy().bookService(user, selectedService);
+                        dataManager.bookServiceForUser(user, selectedService);
                         break;
                     case "2":
-                        String serviceType = bff.input("Choose a service to book:\n1. Flight\n2. Hotel\n3. Car Rental", "1", "2", "3");
-
-                        Service selectedService = null;
-                        if ("1".equals(serviceType)) {
-                            selectedService = selectFlightService();
-                        }
-                        else if ("2".equals(serviceType)) {
-                            selectedService = selectHotelService();
-                        }
-                        else if ("3".equals(serviceType)) {
-                            selectedService = selectCarRentalService();
-                        }
-
-                        if (selectedService != null) {
-                            regularUser.bookService(selectedService);
-                        } else {
-                            System.out.println("No service was booked.");
-                        }
-
+                        // Call method to view booked services for premium user
+                        user.getUserTypeStrategy().viewBookedServices(user);
                         break;
                     case "3":
-                        regularUser.getUserTypeStrategy().viewBookedServices(regularUser);
-                        break;
-                    case "4":
                         isSessionActive = false; // Logout
                         break;
-                    default:
-                        System.out.println("Invalid option. Please try again.");
                 }
             }
         }

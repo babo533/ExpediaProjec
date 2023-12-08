@@ -18,6 +18,10 @@ public abstract class User {
         return username;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
     public void bookService(Service service) {
         userTypeStrategy.bookService(this, service);
     }
@@ -29,14 +33,21 @@ public abstract class User {
     public void addBookedService(Object service) {
         if (service instanceof Service) {
             bookedServices.add((Service) service);
-        }
-        else {
-            throw new IllegalArgumentException("Invalid argument: expected type X but received type Y.");
+        } else {
+            // Include the actual types in the error message
+            String expectedType = "Service";
+            String receivedType = service == null ? "null" : service.getClass().getName();
+            throw new IllegalArgumentException("Invalid argument: expected type " + expectedType + " but received type " + receivedType + ".");
         }
     }
 
+
     public List<Service> getBookedServices() {
         return bookedServices;
+    }
+
+    public void setBookedServices(List<Service> bookedServices) {
+        this.bookedServices = bookedServices;
     }
 
     public UserTypeStrategy getUserTypeStrategy() {

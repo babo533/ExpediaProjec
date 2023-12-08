@@ -13,18 +13,7 @@ public class AdminUser extends User {
     }
 
     public void viewAllBookedServices() {
-        List<User> allUsers = DataManager.getAllUsers();
-        for (User user : allUsers) {
-            System.out.println("User: " + user.getUsername());
-            List<Service> bookedServices = user.getBookedServices();
-            if (bookedServices.isEmpty()) {
-                System.out.println("  No services booked.");
-            } else {
-                for (Service service : bookedServices) {
-                    System.out.println("  Booked Service: " + service.getName() + ", Price: " + service.getPrice());
-                }
-            }
-        }
+        getUserTypeStrategy().viewBookedServices(this);
     }
 
     public void printAllUsers() {

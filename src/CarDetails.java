@@ -33,4 +33,8 @@ public class CarDetails {
         this.pricePerDay = pricePerDay;
     }
 
+    @Override
+    public String toString() {
+        return "Type: " + type + ", Model: " + model + ", Price per Day: " + pricePerDay;
+    }
 }

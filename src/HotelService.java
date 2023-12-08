@@ -21,8 +21,7 @@ public class HotelService extends Service {
                         String hotelCompany = parts[1].trim();
                         String location = parts[2].trim();
                         double pricePerNight = Double.parseDouble(parts[3].trim());
-                        String key = hotelCompany + " - " + roomType.name() + " in " + location; // Unique key for each room
-                        roomInventory.put(key, new RoomDetails(roomType, hotelCompany, location, pricePerNight));
+                        // Create RoomDetails object and add it to the inventory
                     }
                 } catch (Exception e) {
                     System.out.println("Error processing line: " + line);
@@ -34,15 +33,16 @@ public class HotelService extends Service {
     }
 
 
-    public void addRoomToFile(RoomType roomType, String hotelCompany, String location,double price) {
-        try (FileWriter fw = new FileWriter("rooms.txt", true);
+    public void addRoomToFile(RoomType roomType, String hotelCompany, String location, double pricePerNight) {
+        try (FileWriter fw = new FileWriter("/Users/hoon/IdeaProjects/A11_FinalProject/src/hotels.txt", true); // Make sure the file path is correct
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
-            out.println(roomType.name() + "," + location + "," + price);
+            out.println(roomType.name() + "," + hotelCompany + "," + location + "," + pricePerNight);
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
     }
+
 
 
     @Override

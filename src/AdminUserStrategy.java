@@ -18,9 +18,10 @@ public class AdminUserStrategy implements UserTypeStrategy {
             List<Service> bookedServices = u.getBookedServices();
             if (bookedServices.isEmpty()) {
                 System.out.println("  No services booked.");
-            } else {
+            }
+            else {
                 for (Service service : bookedServices) {
-                    System.out.println("  Booked Service: " + service.getName());
+                    System.out.println("Booked Service: " + service.getName() + ", Price: " + service.getPrice());
                 }
             }
         }
