@@ -84,13 +84,13 @@ public class DataManager {
     private static User createUser(String role, String username, String password) {
         switch (role) {
             case "Admin":
-                return new AdminUser(username, password);
+                return new AdminUser(username, password, new AdminUserStrategy());
             case "Premium":
-                return new PremiumUser(username, password);
+                return new PremiumUser(username, password, new PremiumUserStrategy());
             case "Regular":
-                return new RegularUser(username, password);
+                return new RegularUser(username, password, new RegularUserStrategy());
             default:
-                return null; // Or handle unknown roles differently
+                return null;
         }
     }
 

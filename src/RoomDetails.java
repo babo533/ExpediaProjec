@@ -1,17 +1,22 @@
 import java.io.*;
 import java.util.*;
 
+import java.util.*;
+
 public class RoomDetails {
     private RoomType roomType; // Assuming RoomType is an enum you've defined
-    private int capacity;
-    private List<String> amenities;
+    private String hotelCompany;
+    private String location;
+    private double pricePerNight;
 
-    public RoomDetails(RoomType roomType, int capacity, List<String> amenities) {
+    public RoomDetails(RoomType roomType, String hotelCompany, String location, double pricePerNight) {
         this.roomType = roomType;
-        this.capacity = capacity;
-        this.amenities = amenities;
+        this.hotelCompany = hotelCompany;
+        this.location = location;
+        this.pricePerNight = pricePerNight;
     }
 
+    // Getters and Setters
     public RoomType getRoomType() {
         return roomType;
     }
@@ -20,19 +25,38 @@ public class RoomDetails {
         this.roomType = roomType;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public String getHotelCompany() {
+        return hotelCompany;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setHotelCompany(String hotelCompany) {
+        this.hotelCompany = hotelCompany;
     }
 
-    public List<String> getAmenities() {
-        return amenities;
+    public String getLocation() {
+        return location;
     }
 
-    public void setAmenities(List<String> amenities) {
-        this.amenities = amenities;
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public double getPricePerNight() {
+        return pricePerNight;
+    }
+
+    public void setPricePerNight(double pricePerNight) {
+        this.pricePerNight = pricePerNight;
+    }
+
+    // Optional: Override toString() for easy printing of RoomDetails
+    @Override
+    public String toString() {
+        return "RoomDetails{" +
+                "roomType=" + roomType +
+                ", hotelCompany='" + hotelCompany + '\'' +
+                ", location='" + location + '\'' +
+                ", pricePerNight=" + pricePerNight +
+                '}';
     }
 }

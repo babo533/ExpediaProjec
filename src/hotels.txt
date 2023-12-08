@@ -1,0 +1,8 @@
+STANDARD,Marriott,New York,150
+DELUXE,Hilton,Los Angeles,200
+SUITE,Hyatt,Chicago,250
+STANDARD,Marriott,London,180
+DELUXE,Hilton,Tokyo,220
+SUITE,Hyatt,Dubai,300
+STANDARD,Marriott,Sydney,160
+DELUXE,Hilton,Paris,210

@@ -1,7 +1,8 @@
 public class RegularUser extends User {
 
-    public RegularUser(String username, String password) {
-        super(username, password);
+    public RegularUser(String username, String password, UserTypeStrategy userTypeStrategy) {
+        super(username, password, userTypeStrategy);
+        // Additional initialization for RegularUser
     }
 
 

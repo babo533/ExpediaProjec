@@ -42,4 +42,19 @@ public class FlightDetails {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    @Override
+    public void bookService(User user, String serviceName) {
+
+    }
+
+    @Override
+    public String toString() {
+        return "FlightDetails{" +
+                "flightType=" + flightType +
+                ", departureLocation='" + departureLocation + '\'' +
+                ", arrivalLocation='" + arrivalLocation + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

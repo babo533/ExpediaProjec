@@ -26,8 +26,13 @@ public abstract class User {
         userTypeStrategy.viewBookedServices(this);
     }
 
-    public void addBookedService(Service service) {
-        bookedServices.add(service);
+    public void addBookedService(Object service) {
+        if (service instanceof Service) {
+            bookedServices.add((Service) service);
+        }
+        else {
+            throw new IllegalArgumentException("Invalid argument: expected type X but received type Y.");
+        }
     }
 
     public List<Service> getBookedServices() {

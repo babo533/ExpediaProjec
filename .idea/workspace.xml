@@ -5,16 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/src/flights.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hotels.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FlightDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PremiumUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PremiumUserStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PremiumUserStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RegularUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RegularUserStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RegularUserStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RentalCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalCarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RoomDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +40,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "babo533"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="20cb192a-884f-4c66-b835-8e2b38ad5f62" />
+        <option name="url" value="https://github.com/babo533/ExpediaProjec.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -94,7 +115,7 @@
       <workItem from="1701565821658" duration="17569000" />
       <workItem from="1701743832534" duration="2821000" />
       <workItem from="1701921771569" duration="5590000" />
-      <workItem from="1701931146586" duration="5311000" />
+      <workItem from="1701931146586" duration="14619000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -112,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701931423588</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1701945615089</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701945615089</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

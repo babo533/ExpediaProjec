@@ -30,5 +30,6 @@ public abstract class Service {
         this.price *= (1 - discountRate);
     }
     // Abstract method to be implemented by subclasses
-    public abstract void bookService();
+
+    public abstract void bookService(User user, String serviceName);
 }

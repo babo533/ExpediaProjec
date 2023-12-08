@@ -1,0 +1,8 @@
+ECONOMY,New York,Los Angeles,350
+BUSINESS,Chicago,Miami,500
+ECONOMY,Boston,San Francisco,400
+FIRST_CLASS,New York,London,1200
+ECONOMY,Tokyo,Singapore,600
+BUSINESS,Los Angeles,Tokyo,850
+FIRST_CLASS,Dubai,Paris,1500
+ECONOMY,Sydney,Auckland,300
