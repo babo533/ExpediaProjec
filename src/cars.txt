@@ -1,3 +1,5 @@
 Sedan,Toyota Camry,50.0
 SUV,Ford Explorer,70.0
 Sedan,Nissan Altima,40.0
+
+AUDI,AUDI S3,10000.0

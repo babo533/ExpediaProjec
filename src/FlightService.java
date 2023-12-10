@@ -1,17 +1,32 @@
 import java.io.*;
 import java.util.*;
 
+/**
+ * The FlightService class extends the {@code Service} class to manage flight-related services.
+ * It handles operations like loading flight data, adding flights, and booking flights for users.
+ *  * @author Seung Hoon Lee
+ *  * ITP 265, tea
+ *  * Email: slee3471@usc.edu
+ */
 public class FlightService extends Service {
     private Map<String, FlightDetails> flightInventory;
 
-
-
+    /**
+     * Constructs a new {@code FlightService} instance and loads flight data from a specified file.
+     *
+     * @throws IOException If there is an error in reading the flight data file.
+     */
     public FlightService() throws IOException {
         super("Flight Service", 0.0);
         flightInventory = new HashMap<>();
         loadFlightData("/Users/hoon/IdeaProjects/A11_FinalProject/src/flights.txt");
     }
 
+    /**
+     * Loads flight data from a specified file into the flight inventory.
+     *
+     * @param filePath The path to the file containing flight data.
+     */
     public void loadFlightData(String filePath) {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
             String line;
@@ -35,6 +50,14 @@ public class FlightService extends Service {
         }
     }
 
+    /**
+     * Adds a new flight to the flight data file.
+     *
+     * @param flightType        The type of the flight (e.g., ECONOMY, BUSINESS).
+     * @param departureLocation The departure location of the flight.
+     * @param arrivalLocation   The arrival location of the flight.
+     * @param price             The price of the flight.
+     */
 
     public void addFlightToFile(FlightType flightType, String departureLocation, String arrivalLocation, double price) {
         String filePath = "/Users/hoon/IdeaProjects/A11_FinalProject/src/flights.txt"; // File path
@@ -54,8 +77,12 @@ public class FlightService extends Service {
         }
     }
 
-
-
+    /**
+     * Books a flight service for a user.
+     *
+     * @param user      The user who is booking the flight.
+     * @param flightKey The key representing the specific flight in the flight inventory.
+     */
     @Override
     public void bookService(User user, String flightKey) {
         FlightDetails flight = flightInventory.get(flightKey);
@@ -66,15 +93,22 @@ public class FlightService extends Service {
         }
     }
 
-
+    /**
+     * Retrieves the flight inventory map.
+     *
+     * @return The map containing all flights in the inventory.
+     */
     public Map<String, FlightDetails> getFlightInventory() {
         return flightInventory;
     }
 
-    public void setFlightInventory(Map<String, FlightDetails> flightInventory) {
-        this.flightInventory = flightInventory;
-    }
-
+    /**
+     * Converts a string input to the corresponding {@code FlightType} enum.
+     *
+     * @param input The string input representing a flight type.
+     * @return The corresponding {@code FlightType} enum.
+     * @throws IllegalArgumentException If the input string does not correspond to a valid {@code FlightType}.
+     */
     public FlightType getFlightTypeFromString(String input) {
         switch (input.trim().toLowerCase()) {
             case "economy":

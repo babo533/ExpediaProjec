@@ -1,3 +1,10 @@
+/**
+ * The RoomType enum represents different types of hotel rooms available.
+ * Each type signifies a different level of luxury, space, and amenities.
+ *  * @author Seung Hoon Lee
+ *  * ITP 265, tea
+ *  * Email: slee3471@usc.edu
+ */
 public enum RoomType {
     SUITE,
     FAMILY_ROOM,

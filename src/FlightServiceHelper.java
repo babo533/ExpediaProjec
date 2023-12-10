@@ -1,12 +1,32 @@
+import java.io.*;
+import java.util.*;
+
+/**
+ * The FlightServiceHelper class extends the Service class and is used to represent a flight service.
+ * It encapsulates the details of a flight and provides functionality to book the service.
+ *  * @author Seung Hoon Lee
+ *  * ITP 265, tea
+ *  * Email: slee3471@usc.edu
+ */
 public class FlightServiceHelper extends Service {
     private FlightDetails flightDetails;
 
+    /**
+     * Constructs a new FlightService instance and loads flight data from a specified file.
+     *
+     * @throws IOException If there is an error in reading the flight data file.
+     */
     public FlightServiceHelper(FlightDetails flightDetails) {
         super(flightDetails.getDepartureLocation() + " to " + flightDetails.getArrivalLocation(), flightDetails.getPrice());
         this.flightDetails = flightDetails;
     }
 
-    // Implement or override methods as necessary
+    /**
+     * Books this flight service for a user.
+     *
+     * @param user        The user for whom the service is being booked.
+     * @param serviceName The name of the service being booked (used if necessary for more complex logic).
+     */
     @Override
     public void bookService(User user, String serviceName) {
         // Implement booking logic or delegate to FlightDetails
@@ -15,12 +35,20 @@ public class FlightServiceHelper extends Service {
         System.out.println("Flight booked successfully for " + user.getUsername());
     }
 
-    // Optionally, provide a method to access the wrapped FlightDetails
+    /**
+     * Gets the flight details associated with this service.
+     *
+     * @return The FlightDetails instance associated with this service.
+     */
     public FlightDetails getFlightDetails() {
         return flightDetails;
     }
 
-    // Override toString() if needed for displaying flight details
+    /**
+     * Returns a string representation of the FlightServiceHelper instance.
+     *
+     * @return A string representation of this FlightServiceHelper instance.
+     */
     @Override
     public String toString() {
         return "Flight from " + flightDetails.getDepartureLocation() + " to " + flightDetails.getArrivalLocation() +

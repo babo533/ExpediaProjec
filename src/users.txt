@@ -3,3 +3,4 @@ Premium,jane_smith,pass5678,Flight:500.0:BUSINESS:Chicago:Miami;Flight:500.0:BUS
 Regular,jim_beam,securepass123,Flight:600.0:ECONOMY:Tokyo:Singapore
 Admin,super_admin,admin123
 Admin,poop,poop
+Premium,hoonster,hoonsterman

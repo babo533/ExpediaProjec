@@ -8,3 +8,5 @@ FIRST_CLASS,Dubai,Paris,1500
 ECONOMY,Sydney,Auckland,300
 
 ECONOMY,Miami,LA,500.0
+
+ECONOMY,MIAMI,LA,1.0
