@@ -37,9 +37,17 @@ public class FlightService extends Service {
 
 
     public void addFlightToFile(FlightType flightType, String departureLocation, String arrivalLocation, double price) {
-        try (FileWriter fw = new FileWriter("/Users/hoon/IdeaProjects/A11_FinalProject/src/flights.txt", true); // Make sure the file path is correct
+        String filePath = "/Users/hoon/IdeaProjects/A11_FinalProject/src/flights.txt"; // File path
+        try (FileWriter fw = new FileWriter(filePath, true); // Append mode
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
+
+            File file = new File(filePath);
+            // Check if the file already has content and prepend a newline character if it does
+            if (file.length() > 0) {
+                out.println(); // Add a newline character
+            }
+
             out.println(flightType.name() + "," + departureLocation + "," + arrivalLocation + "," + price);
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());

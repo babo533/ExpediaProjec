@@ -37,14 +37,23 @@ public class RentalCarService extends Service {
 
 
     public void addCarToFile(String brand, String model, double pricePerDay) {
-        try (FileWriter fw = new FileWriter("/Users/hoon/IdeaProjects/A11_FinalProject/src/cars.txt", true); // Make sure the file path is correct
+        String filePath = "/Users/hoon/IdeaProjects/A11_FinalProject/src/cars.txt"; // Adjust the file path as needed
+        try (FileWriter fw = new FileWriter(filePath, true); // Append mode
              BufferedWriter bw = new BufferedWriter(fw);
              PrintWriter out = new PrintWriter(bw)) {
+
+            File file = new File(filePath);
+            // Check if the file already has content and prepend a newline character if it does
+            if (file.length() > 0) {
+                out.println(); // Add a newline character
+            }
+
             out.println(brand + "," + model + "," + pricePerDay);
         } catch (IOException e) {
             System.out.println("An error occurred while writing to the file: " + e.getMessage());
         }
     }
+
 
 
     @Override

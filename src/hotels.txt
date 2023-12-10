@@ -7,3 +7,4 @@ SUITE,Hyatt,Dubai,300
 STANDARD,Marriott,Sydney,160
 PENTHOUSE,Hilton,Paris,210
 STANDARD,Mariott,Paris,1000.0
+STANDARD,Hyatt,Fresno,40.0

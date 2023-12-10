@@ -25,7 +25,7 @@ public class AdminUser extends User {
     }
 
     public void addFlightAsAdmin(FlightService flightService) {
-        String flightTypeInput = bff.input("Enter flight type (Economy, Economy Plus, Business, Business Plus, First Class):");
+        String flightTypeInput = bff.input("Enter flight type (Economy, Economy Plus, Business, Business Plus, First Class): (ENTER IN ALL CAPS)");
         FlightType flightType;
         try {
             flightType = FlightType.valueOf(flightTypeInput.trim().toUpperCase().replace(" ", "_"));
@@ -53,7 +53,7 @@ public class AdminUser extends User {
 
     public void addHotelsAsAdmin(HotelService hotelService) {
         // Assuming RoomType is an enum with values like STANDARD, DELUXE, SUITE, etc.
-        String roomTypeInput = bff.input("Enter room type (e.g., Standard, Deluxe, Suite):");
+        String roomTypeInput = bff.input("Enter room type (e.g., Standard, Deluxe, Suite) (ENTER IN ALL CAPS):");
         RoomType roomType;
         try {
             roomType = RoomType.valueOf(roomTypeInput.trim().toUpperCase().replace(" ", "_"));

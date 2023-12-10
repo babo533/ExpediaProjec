@@ -275,22 +275,7 @@ public class Main {
         return new CarServiceHelper(selectedCar);
     }
 
-//
-//
-//
-//    public void handleServiceAddition() {
-//        int choice = bff.inputInt("Enter choice (1 for flights, 2 for hotels, 3 for cars)");
-//
-//        if (choice == 1) {
-//            //addFlightDetails();
-//        }
-//        // Handle other choices similarly
-//    }
 
-
-
-
-    // ... other methods ...
 
 }
 

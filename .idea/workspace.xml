@@ -7,16 +7,9 @@
     <list default="true" id="8eb2a224-0ac8-44da-a83d-c985cc4b9161" name="Changes" comment="pds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminUserStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminUserStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CarDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CarDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/FlightService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlightService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HotelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HotelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RentalCarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RentalCarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RoomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RoomType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cars.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/cars.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/flights.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/flights.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hotels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/hotels.txt" afterDir="false" />
@@ -114,7 +107,7 @@
       <workItem from="1701565821658" duration="17569000" />
       <workItem from="1701743832534" duration="2821000" />
       <workItem from="1701921771569" duration="5590000" />
-      <workItem from="1701931146586" duration="25743000" />
+      <workItem from="1701931146586" duration="28715000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -156,7 +149,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702011499861</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="pds">
+      <option name="closed" value="true" />
+      <created>1702021084043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1702021084043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
